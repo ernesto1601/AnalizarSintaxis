@@ -1,0 +1,24 @@
+1.- El lenguaje siempre es definido entre clases y esta puede ser "public" o "private"
+	seguido de la palabra reservada class seguido de un identificador que es el nombre de la clase
+	todo lo se valla a incluir a continuacion se coloca entre las llaves de la clase. Ejemplo (public class Prueba{ /*code*/}).
+
+2.- El lenguaje es estricto a la declaracion de variables, las variables soportadas por el lenguaje son: int, long, double y String
+	en el caso de que se requiera de la declarición de variables estas deben de ir seguido de la declaracion de la clase (puede o no
+	haber declaración de variables). Una vez que se haya declarado una variable estamos obligados a inicializarla. Ejemplo:
+	(int identificador = 0; long id2 = 2846284; String cadena = $palabra bonita$). La declaración de una cadena comienza por el 
+	símbolo $ y termina su declaración de la misma manera.
+
+3.- Una vez hayamos o no declarado variables debemos declarar estrictamente la función "main" de la siguiente manera:
+	public static void main( String /*identificador*/){}, No se puede incluir código dentro de el main.
+
+4.- Una vez declarado nuestro main el lenguaje nos permite declarar multiples funciones de la siguiente manera:
+	function /*identificador*/ (/*tipo de dato e identificador (opcional)*/){}. La función puede o no recibir parametros 
+	de los tipos de datos admitidos por el lenguaje, No se puede incluir codigo dentro de una funcion.
+	La declaracion de funciones es opcional por lo que para finalizar nuestra clase tendremos que cerrar la llave de la clase
+	}.
+
+5.- De cumplirse correctamente las reglas del lenguaje este nos mostrara el mensaje "La sintaxis es correcta" de lo contrario
+	nos indicara cual fue nuestro erro sintáctico indicandonos el tipo de estado que esperaba y el que se encontro. Ejemplo:
+	"Syntax ERROR, expected: identificador found: cadena".
+
+6.- Para ejemplo práctico puede ver el archivo "texto.txt"
