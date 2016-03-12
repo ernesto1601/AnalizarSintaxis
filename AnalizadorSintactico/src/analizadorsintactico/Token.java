@@ -12,5 +12,5 @@ package analizadorsintactico;
 public enum Token {
     
     publico,privado,clase,Identificador,LLA,entero_id,largo_id,doble_id,igual,Entero,cadena_id,cadena,
-    punt_coma,char_id,cad_char,estatico,ninguno,principal,PA,PC,funcion,LLC,ERROR,espacio;
+    punt_coma,estatico,ninguno,principal,PA,PC,funcion,LLC,ERROR,espacio;
 }

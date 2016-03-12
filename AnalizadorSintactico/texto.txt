@@ -1,8 +1,7 @@
- private class Prueba{
+ public class Prueba {
 
- 	int num = 12 ;
- 	long num2 = 34 ;
- 	double id = 10 ;
+ 	int num = 0;
+ 	String frase = $ algo $;
 
 	public static void main ( String args ) {
 		
@@ -13,5 +12,8 @@
 	}
 	function hacer2 ( double otro_mas ) {
 
+	}
+	function accion( int numero){
+	
 	}
 }

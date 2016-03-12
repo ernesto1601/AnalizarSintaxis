@@ -52,8 +52,7 @@ public class AnalizaSintaxis {
         if(tokens.get(current_token) == Token.entero_id ||
            tokens.get(current_token) == Token.largo_id ||
            tokens.get(current_token) == Token.doble_id ||
-           tokens.get(current_token) == Token.cadena_id ||
-           tokens.get(current_token) == Token.char_id){
+           tokens.get(current_token) == Token.cadena_id ){
             
             //current_token++;
             
@@ -148,7 +147,7 @@ public class AnalizaSintaxis {
                             }else{
                                 return "Syntax ERROR, expected: = found: "+tokens.get(current_token);
                             }
-                            if(tokens.get(current_token) == Token.cad_char){
+                            if(tokens.get(current_token) == Token.cadena){
                                 current_token++;
                             }else{
                                 return "Syntax ERROR, expected: Cadena found: "+tokens.get(current_token);
@@ -159,30 +158,7 @@ public class AnalizaSintaxis {
                                 return "Syntax ERROR, expected: ; found: "+tokens.get(current_token);
                             }
                         break;
-                    case char_id:
-                        System.out.println("Char");
-                         current_token++;
-                            if(tokens.get(current_token) == Token.Identificador){
-                                current_token++;
-                            }else{
-                                return "Syntax ERROR, expected: Identificador found: "+tokens.get(current_token);
-                            }
-                            if(tokens.get(current_token) == Token.igual){
-                                current_token++;
-                            }else{
-                                return "Syntax ERROR, expected: = found: "+tokens.get(current_token);
-                            }
-                            if(tokens.get(current_token) == Token.cad_char){
-                                current_token++;
-                            }else{
-                                return "Syntax ERROR, expected: caracter found: "+tokens.get(current_token);
-                            }
-                            if(tokens.get(current_token) == Token.punt_coma){
-                                current_token++;
-                            }else{
-                                return "Syntax ERROR, expected: ; found: "+tokens.get(current_token);
-                            }
-                        break;
+                    
                 }
             }
             
@@ -271,8 +247,7 @@ public class AnalizaSintaxis {
                    tokens.get(current_token) == Token.entero_id ||
                    tokens.get(current_token) == Token.largo_id ||
                    tokens.get(current_token) == Token.doble_id ||
-                   tokens.get(current_token) == Token.cadena_id ||
-                   tokens.get(current_token) == Token.char_id){
+                   tokens.get(current_token) == Token.cadena_id ){
                     
                     switch(tokens.get(current_token)){
                         case PC:
@@ -319,20 +294,6 @@ public class AnalizaSintaxis {
                             break;
                             
                         case cadena_id:
-                                current_token++;
-                                if(tokens.get(current_token) == Token.Identificador){
-                                    current_token++;
-                                }else{
-                                    return "Syntax ERROR, expected: identificador found: "+tokens.get(current_token);
-                                }
-                                if(tokens.get(current_token) == Token.PC){
-                                    current_token++;
-                                }else{
-                                    return "Syntax ERROR, expected: ) found: "+tokens.get(current_token);
-                                }
-                            break;
-                        
-                        case char_id:
                                 current_token++;
                                 if(tokens.get(current_token) == Token.Identificador){
                                     current_token++;

@@ -21,14 +21,12 @@ white= [\n\t]
 <YYINITIAL> int {return entero_id;}
 <YYINITIAL> long {return largo_id;}
 <YYINITIAL> double {return doble_id;}
-<YYINITIAL> char {return char_id;}
 <YYINITIAL> function {return funcion;}
 
 
 {white} {/*Ignore*/}
 " " {return espacio;}
-"" {lexeme=yytext(); return cadena;}
-[']{L}|{D}|{A}['] {lexeme=yytext(); return cad_char;}
+[$]({L}|{D}|{A}|" ")*[$] {lexeme=yytext(); return cadena;}
 "=" {return igual;}
 ({L}|{A}|_)({L}|{D}|{A}|_)* {lexeme=yytext(); return Identificador;}
 [-+]?{D}+ {lexeme=yytext(); return Entero;}
