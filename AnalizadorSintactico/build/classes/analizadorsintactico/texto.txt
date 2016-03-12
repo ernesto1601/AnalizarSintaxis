@@ -1,0 +1,12 @@
+private class Prueba {
+	
+	int numero = 12;
+	String mensaje = 'cosa';
+	char = 'f';
+
+	public static void main (String args) {
+		function hacer(){
+
+		}
+	}
+}
