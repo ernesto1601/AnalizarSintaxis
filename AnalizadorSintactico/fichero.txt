@@ -1,1 +1,1 @@
- public class Prueba { 	int num = 0; 	String frase = $ algo $;	public static void main ( String args ) {			}	function hacer ( int otro ) {	}	function hacer2 ( double otro_mas ) {	}	function accion( int numero){		}}
+ private class Prueba {		int numero = 12;	String mensaje = $cosa$;	public static void main (String args) {		function hacer(){		}	}}

@@ -22,6 +22,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import leerarchivo.AllLines;
 
 /**
@@ -40,12 +42,14 @@ public class FXMLDocumentController implements Initializable {
     ArrayList<Token> tokens = new ArrayList();
     
     AnalizaSintaxis as;
-   
-    
+    FileChooser explorador;
+    Stage stage;
+    public static File archivo;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-         String path = "C:/Users/Ernesto/Documents/GitHub/AnalizadorSintactico/src/analizadorsintactico/Lexer.flex";
+        //entrada.setText(null);
+         String path = "C:/Users/ERIDE21/Documents/UPCH/5°Cuatri/LA/2Corte/Sintaxis/AnalizarSintaxis/AnalizadorSintactico/src/analizadorsintactico/Lexer.flex";
         generarLexer(path);
     }  
     
@@ -62,6 +66,19 @@ public class FXMLDocumentController implements Initializable {
                 alert.setContentText("Andres Aguilar Cruz 143385\nErnesto Sandoval Becerra 143374\nEdgardo Rito Deheza 143370");
                 alert.showAndWait();
     }
+    
+    @FXML private void openFile(){
+        explorador = new FileChooser();
+        explorador.setTitle("Open File");
+        explorador.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("txt","*.txt")
+        );
+        archivo = explorador.showOpenDialog(stage);
+        if (archivo != null){
+            
+        }
+    }
+    
     @FXML
     private void accion(ActionEvent e){
         
@@ -73,7 +90,7 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public void probarLexerFile() throws IOException{
-        AllLines al = new AllLines(entrada.getText());
+        AllLines al = new AllLines(archivo.getName());
         File fichero = new File("fichero.txt");
         PrintWriter writer;
         resultado.setText("");

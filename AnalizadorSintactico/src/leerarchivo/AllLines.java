@@ -1,5 +1,6 @@
 package leerarchivo;
 
+import static analizadorsintactico.FXMLDocumentController.archivo;
 import java.io.*;
 
 public class AllLines{
@@ -20,7 +21,7 @@ public class AllLines{
 		  datos = new String [numlines];
           int c = 0;
           String bfread = "";
-       	  fr = new FileReader(name);
+       	  fr = new FileReader(archivo);
           br = new BufferedReader(fr);
 
           while((bfread = br.readLine()) != null){
@@ -46,7 +47,7 @@ public class AllLines{
     
       name = aux.replaceAll("[\n\r]",""); //Reasignamos al atributo el nombre del archivo pero descartamos cualquier "enter" si el nombre es ingresado por el usuario
     try{ 
-      fr = new FileReader(name); // Creamos el objeto de la clase FileReader
+      fr = new FileReader(archivo); // Creamos el objeto de la clase FileReader
       br = new BufferedReader(fr); // Creamos el objeto de la clase BufferedReader
         
       while((cadena=br.readLine()) != null){ //Un ciclo que nos leerá cada una de las lineas de nuestro archivo hasta que ya no haya nada.
